@@ -2,14 +2,14 @@
   <div class="hello">
     <p style="color:red">哈哈哈哈</p>
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2>11,Essential Links</h2>
     <ul>
       <li>
         <a
           href="https://vuejs.org"
           target="_blank"
         >
-          Core Docs
+          22,Core Docs
         </a>
       </li>
       <li>
@@ -17,7 +17,7 @@
           href="https://forum.vuejs.org"
           target="_blank"
         >
-          Forum
+          33,Forum
         </a>
       </li>
       <li>
@@ -25,7 +25,7 @@
           href="https://chat.vuejs.org"
           target="_blank"
         >
-          Community Chat
+          44,Community Chat
         </a>
       </li>
       <li>
@@ -33,7 +33,7 @@
           href="https://twitter.com/vuejs"
           target="_blank"
         >
-          Twitter
+          55,Twitter
         </a>
       </li>
       <br>
@@ -42,7 +42,7 @@
           href="http://vuejs-templates.github.io/webpack/"
           target="_blank"
         >
-          Docs for This Template
+          66,Docs for This Template
         </a>
       </li>
     </ul>
@@ -53,7 +53,7 @@
           href="http://router.vuejs.org/"
           target="_blank"
         >
-          vue-router
+          77,vue-router
         </a>
       </li>
       <li>
