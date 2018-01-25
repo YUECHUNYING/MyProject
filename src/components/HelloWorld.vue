@@ -1,4 +1,4 @@
-<template>
+<!--<template>
   <div class="hello">
     <p style="color:red">哈哈哈哈</p>
     <h1>{{ msg }}</h1>
@@ -83,32 +83,74 @@
     </ul>
   </div>
 </template>
+-->
+<template>
+  <div class="homePage">
+      <header class="header">
+         <img src="./../assets/timg.jpg" alt="">
+          <input type="text" class="search-input" placeholder="输入要搜索的目的地">
+          <div class="icon-search" @click="search"></div>
+      </header>
+  </div>
+</template>
 
 <script>
+// import imgSrc from "@/assets/timg.jpg"
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  methods: {
+    search: function () { alert('点击进行搜索查询') }
   }
+
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
+ html,body{width:100%;height:100%;position:relative;}
+.header{width:100%;height:28rem;}
+.search-input{
+  width: 70%;
+  height: 0.3rem;
+  border-radius: 0.15rem;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  outline: none;    /* 获得焦点时隐藏方角样式*/
+  position: absolute;
+  top: 0.15rem;
+  left:15%;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+.search-input::-webkit-input-placeholder{
+  font-size: 0.16rem;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+/* 搜索的图表*/
+.icon-search{
+  width: 0.16rem;
+  height: 0.16rem;
+  border-radius: 100%;
+  border:2px solid currentcolor;
+  position: absolute;
+  top: 0.15rem;
+  right: 16%;
+  color: #fff;
 }
-a {
-  color: #42b983;
+.icon-search:after{
+  content: "";
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width:0.12rem;
+  height: 2px;
+  position: absolute;
+  top:0.19rem;
+  left:0.13rem;
+  background-color: currentcolor;
+  color: #fff;
 }
 </style>

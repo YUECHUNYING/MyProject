@@ -1,19 +1,322 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-    <!--width=device-width表示强制让文档的宽度和设备的宽度保持1:1,用户是否可以手动缩放，表示文档的最大宽度比例是1.0，不允许用户点击放大浏览-->
-    <meta content="yes" name="apple-mobile-web-app-capable"> <!--iphone设备中的safari私有meta标签,表示允许全屏模式预览-->
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">  <!--也是iphone标签的私有标签，指定的iphone中的safari顶端的状态条的样式-->
-    <meta content="telephone=no" name="format-detection">  <!--忽略将设备中的数字识别为电话号码-->
-    <meta content="email=no" name="format-detection"> <!--忽略页面中邮件地址-->
-    <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1" name="viewport" media="(device-height:568px)">
-    <title>myproject</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <!--a标签点击取消高亮  -webkit-tap-highlight-color:rgba(0,0,0,0),-webkit-tap-highlight-color:transparent -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <!--width=device-width表示强制让文档的宽度和设备的宽度保持1:1,用户是否可以手动缩放，表示文档的最大宽度比例是1.0，不允许用户点击放大浏览-->
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <!--iphone设备中的safari私有meta标签,表示允许全屏模式预览-->
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <!--也是iphone标签的私有标签，指定的iphone中的safari顶端的状态条的样式-->
+  <meta content="telephone=no" name="format-detection">
+  <!--忽略将设备中的数字识别为电话号码-->
+  <meta content="email=no" name="format-detection">
+  <!--忽略页面中邮件地址-->
+  <meta content="initial-scale=1.0,user-scalable=no,maximum-scale=1" name="viewport" media="(device-height:568px)">
+  <title>myproject</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <!--a标签点击取消高亮  -webkit-tap-highlight-color:rgba(0,0,0,0),-webkit-tap-highlight-color:transparent -->
+</body>
+
 </html>
+<script>
+  document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+
+</script>
+<style>
+  /* 禁止缩放表单 */
+  
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"],
+  input {
+    resize: none;
+    border: none;
+  }
+  
+/* 取消链接高亮  */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 设置HTML5元素为块 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+/* 图片自适应 */
+img {
+    width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    display: block;
+    -ms-interpolation-mode: bicubic;/*为了照顾ie图片缩放失真*/
+}
+
+/* 初始化 */
+body, div, ul, li, ol, h1, h2, h3, h4, h5, h6, input, textarea, select, p, dl, dt, dd, a, img, button, form, table, th, tr, td, tbody, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 'Microsoft YaHei','宋体', Tahoma, Arial, sans-serif;
+    color: #555;
+    background-color: #F7F7F7;
+}
+em, i {
+    font-style: normal;
+}
+ul,li{
+    list-style-type: none;
+}
+strong {
+    font-weight: normal;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+a {
+    text-decoration: none;
+    color: #969696;
+    font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+    text-decoration: none;
+}
+ul, ol {
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-family: 'Microsoft YaHei';
+}
+img {
+    border: none;
+}
+input{
+    font-family: 'Microsoft YaHei';
+}
+/*单行溢出*/
+.one-txt-cut{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*多行溢出 手机端使用*/
+.txt-cut{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    /* -webkit-line-clamp: 2; */
+    -webkit-box-orient: vertical;
+}
+/* 移动端点击a链接出现蓝色背景问题解决 */
+a:link,a:active,a:visited,a:hover {
+    background: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+  @media screen and (max-width: 321px) {
+    body {
+      font-size: 16px
+    }
+  }
+  
+  @media screen and (min-width: 321px) and (max-width:400px) {
+    body {
+      font-size: 17px
+    }
+  }
+  
+  @media screen and (min-width: 400px) {
+    body {
+      font-size: 19px
+    }
+  }
+  
+  @media screen and (max-width: 321px) {
+    header,
+    footer {
+      font-size: 16px
+    }
+  }
+  
+  @media screen and (min-width: 321px) and (max-width:400px) {
+    header,
+    footer {
+      font-size: 17px
+    }
+  }
+  
+  @media screen and (min-width: 400px) {
+    header,
+    footer {
+      font-size: 19px
+    }
+  }
+</style>
+
+<!--css3的单位rem（rem是基于html标签的字体大小的），默认的html的font-size是16px，默认用10px作为基数，所以得到的10/16的百分比是62.5%，也就是设置1rem的字体，就是10px-->
+<!--媒体查询media，使用百分比-->
+<!--1，拖拽
+    2，轮播图
+    3，进度条
+    4，滚动条
+    5，自动搜索建议机制 （允许使用键盘进行交互，当用户使用方向键向下滚动到最后的条目之后。继续滚动会跳转到顶部的项目。允许用户使用Esc建推出列表。）
+ -->
+
+<!--1，将布局视口大小设为设备像素尺寸     
+    var scale = 1 / window.devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+    2，动态设置html字体大小
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    3，将设计图中的尺寸换算成rem
+    元素的rem尺寸 = 元素的psd稿测量的像素尺寸 / 动态设置的html标签的font-size值
+    
+    模板
+    JavaScript
+
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="" />
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 2.66666667rem;
+        height: 2.66666667rem;
+        background: red;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+
+    <script>
+    var scale = 1 / window.devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+</body>
+</html>
+
+
+
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="" />
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 2.66666667rem;
+        height: 2.66666667rem;
+        background: red;
+    }
+    </style>
+</head>
+<body>
+ 
+    <div class="box"></div>
+ 
+    <script>
+    var scale = 1 / window.devicePixelRatio;
+    document.querySelector('meta[name="viewport"]').setAttribute('content','width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+ 
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 10 + 'px';
+    </script>
+</body>
+</html>-->
+<!--
+  网易的做法。先定下一个标准，比如设计稿尺寸（750px）/100,得到的就是无论是什么设备，页面的总宽度就是7.5rem，只是我们需要根据布局视口的尺寸动态的设置font-size的值。这样不同设备下相同的rem对应的是不同的像素值，实现了不同设备下的等比缩放，另外，和淘宝店的做法一样，文字的字体大小不要使用rem换算
+  <html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 2rem;
+        height: 2rem;
+        background: red;
+    }
+    </style>
+</head>
+<body>
+ 
+    <div class="box"></div>
+ 
+    <script>
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+     document.documentElement.style.fontSize = document.documentElement.clientWidth / （设计稿宽度/100） + 'px';
+    </script>
+</body>
+</html>
+-->
+
+<!--
+  字体大小，不能换算成rem做单位，而是使用媒体查询来进行动态设置
+  @media screen and (max-width: 321px) {
+    body {
+        font-size:16px
+    }
+}
+ 
+@media screen and (min-width: 321px) and (max-width:400px) {
+    body {
+        font-size:17px
+    }
+}
+ 
+@media screen and (min-width: 400px) {
+    body {
+        font-size:19px
+    }
+}
+
+
+@media screen and (max-width: 321px) {
+    header,footer {
+        font-size:16px
+    }
+}
+ 
+@media screen and (min-width: 321px) and (max-width:400px) {
+    header,footer {
+        font-size:17px
+    }
+}
+ 
+@media screen and (min-width: 400px) {
+    header,footer {
+        font-size:19px
+    }
+}
+321px以下 
+321px – 400px之间 （比321px以下的字体大1px，比400px以上的字体小2个px）
+400px以上
+-->
