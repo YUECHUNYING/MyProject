@@ -95,7 +95,6 @@
 </template>
 
 <script>
-// import imgSrc from "@/assets/timg.jpg"
 export default {
   name: 'HelloWorld',
   data () {
@@ -113,9 +112,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
  html,body{width:100%;height:100%;position:relative;}
-.header{width:100%;height:28rem;}
+.header{width:100%;height:4rem;}
 .search-input{
-  width: 70%;
+  width: 5.5rem;
   height: 0.3rem;
   border-radius: 0.15rem;
   background: transparent;
@@ -124,7 +123,10 @@ export default {
   outline: none;    /* 获得焦点时隐藏方角样式*/
   position: absolute;
   top: 0.15rem;
-  left:15%;
+  left:1rem;
+  font-size: 0.24rem;
+  color: #ff9;
+  padding: 0 0.4rem 0 0.1rem;
 }
 .search-input::-webkit-input-placeholder{
   font-size: 0.16rem;
@@ -137,7 +139,7 @@ export default {
   border:2px solid currentcolor;
   position: absolute;
   top: 0.15rem;
-  right: 16%;
+  right:  0.6rem;
   color: #fff;
 }
 .icon-search:after{
