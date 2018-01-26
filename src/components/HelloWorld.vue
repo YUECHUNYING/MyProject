@@ -87,10 +87,14 @@
 <template>
   <div class="homePage">
       <header class="header">
-         <img src="./../assets/timg.jpg" alt="">
+         <img src="./../assets/timg.jpg" alt="图片路径不正确">
           <input type="text" class="search-input" placeholder="输入要搜索的目的地">
-          <div class="icon-search" @click="search"></div>
+          <span class="fa fa-search icon-search"  @click="search"></span>
+          <!--<div class="icon-search" @click="search"></div>-->
       </header>
+      <div class="main">
+        <span>阿的郭德纲的大哥大哥的过渡高科技的风格开发灌灌灌灌灌灌灌灌灌过过过过过的观点给的股份的还得会爽肤水给对方的加肥加大减肥大幅度就放假</span>
+      </div>
   </div>
 </template>
 
@@ -112,6 +116,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
  html,body{width:100%;height:100%;position:relative;}
+.homePage{width:100%;height:100%;}
 .header{width:100%;height:4rem;}
 .search-input{
   width: 5.5rem;
@@ -128,11 +133,9 @@ export default {
   color: #ff9;
   padding: 0 0.4rem 0 0.1rem;
 }
-.search-input::-webkit-input-placeholder{
-  font-size: 0.16rem;
-}
-/* 搜索的图表*/
-.icon-search{
+
+/* 搜索的图标*/
+/*.icon-search{
   width: 0.16rem;
   height: 0.16rem;
   border-radius: 100%;
@@ -154,5 +157,28 @@ export default {
   left:0.13rem;
   background-color: currentcolor;
   color: #fff;
+}*/
+.icon-search{
+  position: absolute;
+  top: 0.15rem;
+  right:  0.6rem;
+  color: #fff;
 }
+
+ @media screen and (max-width: 321px) {
+    .main {
+      font-size: 16px;
+    }
+  }
+  @media screen and (min-width: 321px) and (max-width:400px) {
+    .main {
+      font-size: 17px;
+    }
+  }
+  @media screen and (min-width: 400px) {
+    .main {
+      font-size: 19px;
+    }
+  }
+
 </style>
