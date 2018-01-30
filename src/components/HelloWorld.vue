@@ -90,9 +90,12 @@
          <img src="./../assets/timg.jpg" alt="图片路径不正确">
           <input type="text" class="search-input" placeholder="输入要搜索的目的地">
           <span class="fa fa-search icon-search"  @click="search"></span>
-          <!--<div class="icon-search" @click="search"></div>-->
+          <div class="icon-search" @click="search"></div>
       </header>
       <div class="main">
+        <!--跳转页面 <router-link>标签的使用 、点击事件、a标签（？）-->
+        <div><button @click="goToBootstrap">点击跳转到bootstrap</button></div>
+        <a v-bind:href="'Bootstrap'">点击跳转到bootstrap</a>
         <span>阿的郭德纲的大哥大哥的过渡高科技的风格开发灌灌灌灌灌灌灌灌灌过过过过过的观点给的股份的还得会爽肤水给对方的加肥加大减肥大幅度就放假</span>
       </div>
   </div>
@@ -107,7 +110,10 @@ export default {
     }
   },
   methods: {
-    search: function () { alert('点击进行搜索查询') }
+    search: function () { alert('点击进行搜索查询') },
+    goToBootstrap: function () {
+      this.$router.push({name: 'Bootstrap', path: 'Bootstrap'})
+    }
   }
 
 }
